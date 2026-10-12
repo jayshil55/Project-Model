@@ -1,0 +1,660 @@
+/* NutriCare TUI -- Gemini-Inspired Dark Theme & Responsive Layout Tokens */
+
+Screen {
+    background: #111318;
+    color: #E6E8F0;
+    overflow-y: hidden;
+}
+
+/* Header & Footer bars (Pinned) */
+#header-bar {
+    dock: top;
+    height: 3;
+    background: #191C24;
+    color: #E6E8F0;
+    border-bottom: solid #2E3345;
+    padding: 0 1;
+}
+
+#footer-bar {
+    dock: bottom;
+    height: 1;
+    background: #191C24;
+    color: #9299AA;
+    border-top: solid #2E3345;
+    padding: 0 1;
+}
+
+/* Dashboard Quick Navigation Bar (Pinned below Header) */
+#dash-quick-nav {
+    height: 3;
+    background: #141720;
+    border-bottom: solid #2E3345;
+    padding: 0 1;
+    margin: 0;
+    align-vertical: middle;
+}
+
+.nav-btn {
+    min-width: 12;
+    height: 3;
+    margin: 0 1 0 0;
+    padding: 0 1;
+    border: none;
+    background: #1F2432;
+    color: #E6E8F0;
+}
+
+.nav-btn:hover {
+    background: #2D354B;
+    color: #43D9D0;
+}
+
+.nav-btn:focus {
+    background: #37415E;
+    color: #FFFFFF;
+    border: solid #43D9D0;
+}
+
+.nav-btn.-primary {
+    background: #1F364D;
+    color: #43D9D0;
+    text-style: bold;
+}
+
+/* Base Panel container */
+.panel {
+    background: #191C24;
+    border: round #2E3345;
+    padding: 1 1;
+    margin-bottom: 1;
+    height: auto;
+}
+
+.panel:focus-within {
+    border: round #43D9D0;
+}
+
+.panel-title {
+    color: #43D9D0;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+.sub-title {
+    color: #A879D5;
+    text-style: bold;
+}
+
+/* Dashboard Content Grid (2 Columns on Wide, 1 Column on Narrow) */
+#dashboard-scrollable {
+    height: 1fr;
+    padding: 1 1;
+    overflow-y: auto;
+}
+
+#dash-content-grid {
+    layout: horizontal;
+    height: auto;
+    width: 100%;
+}
+
+.dash-col {
+    width: 1fr;
+    height: auto;
+    margin-right: 1;
+}
+
+/* Control Docks (Pinned toolbars for ML and Condition screens) */
+#ml-control-dock, #cond-control-dock {
+    height: auto;
+    background: #191C24;
+    border-bottom: solid #2E3345;
+    padding: 1 1;
+    margin-bottom: 0;
+}
+
+.preset-row {
+    height: 3;
+    margin-bottom: 1;
+    align-vertical: middle;
+}
+
+.action-row {
+    height: 3;
+    align-vertical: middle;
+}
+
+.toolbar-label {
+    padding-top: 1;
+    width: 12;
+    color: #A879D5;
+    text-style: bold;
+}
+
+.hint-label {
+    padding-top: 1;
+    color: #9299AA;
+    margin-left: 2;
+}
+
+.tool-btn {
+    min-width: 14;
+    height: 3;
+    margin-right: 1;
+}
+
+.tool-btn-primary {
+    min-width: 20;
+    height: 3;
+    margin-right: 1;
+    background: #1F364D;
+    color: #43D9D0;
+    border: solid #43D9D0;
+    text-style: bold;
+}
+
+.tool-btn-primary:hover {
+    background: #2B4E70;
+    color: #FFFFFF;
+}
+
+#biomarker-inputs-container, #cond-inputs-container, #condition-inputs-container {
+    height: auto;
+    width: 100%;
+}
+
+#ml-results-display, #cond-results-display {
+    height: auto;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+/* Responsive Split Workspaces (Form on Left, Results on Right) */
+.ml-workspace, .cond-workspace {
+    layout: horizontal;
+    height: 1fr;
+    width: 100%;
+    padding: 0 1;
+}
+
+.ml-form-col {
+    width: 55%;
+    height: 100%;
+    padding-right: 1;
+    border-right: solid #2E3345;
+}
+
+.ml-results-col {
+    width: 45%;
+    height: 100%;
+    padding-left: 1;
+}
+
+.cond-form-col {
+    width: 48%;
+    height: 100%;
+    padding-right: 1;
+    border-right: solid #2E3345;
+}
+
+.cond-results-col {
+    width: 52%;
+    height: 100%;
+    padding-left: 1;
+}
+
+/* Status Badges */
+.status-good {
+    color: #4ECA78;
+    text-style: bold;
+}
+
+.status-okay {
+    color: #EAB308;
+    text-style: bold;
+}
+
+.status-poor {
+    color: #EF4444;
+    text-style: bold;
+}
+
+.status-critical {
+    color: #FF3344;
+    background: #331114;
+    text-style: bold;
+}
+
+.status-cyan {
+    color: #43D9D0;
+    text-style: bold;
+}
+
+.muted {
+    color: #9299AA;
+}
+
+.accent-blue {
+    color: #5294E2;
+}
+
+.accent-violet {
+    color: #A879D5;
+}
+
+.accent-pink {
+    color: #D46A9B;
+}
+
+/* Button Variants */
+Button {
+    background: #242938;
+    color: #E6E8F0;
+    border: solid #3D445C;
+    margin: 0 1 1 0;
+    min-width: 14;
+}
+
+Button:hover {
+    background: #2E354A;
+    color: #43D9D0;
+    border: solid #43D9D0;
+}
+
+Button:focus {
+    background: #333C57;
+    color: #FFFFFF;
+    border: double #43D9D0;
+}
+
+Button.-primary {
+    background: #1F364D;
+    color: #43D9D0;
+    border: solid #43D9D0;
+    text-style: bold;
+}
+
+Button.-primary:hover {
+    background: #2B4E70;
+    color: #FFFFFF;
+}
+
+Button.-success {
+    background: #143825;
+    color: #4ECA78;
+    border: solid #4ECA78;
+}
+
+Button.-warning {
+    background: #3B2E10;
+    color: #EAB308;
+    border: solid #EAB308;
+}
+
+Button.-error, Button.-danger {
+    background: #3D181D;
+    color: #EF4444;
+    border: solid #EF4444;
+}
+
+/* Input Fields and Form Layouts */
+Input {
+    background: #141720;
+    color: #E6E8F0;
+    border: solid #2E3345;
+    height: 3;
+    padding: 0 1;
+}
+
+Input:focus {
+    border: solid #43D9D0;
+    background: #181C28;
+}
+
+.form-row {
+    layout: horizontal;
+    height: 3;
+    margin-bottom: 0;
+    align-vertical: middle;
+}
+
+.field-label {
+    width: 26;
+    padding-top: 1;
+    color: #E6E8F0;
+}
+
+.field-unit {
+    width: 16;
+    padding-top: 1;
+    color: #9299AA;
+}
+
+.field-input {
+    width: 18;
+    height: 3;
+}
+
+/* DataTable */
+DataTable {
+    background: #191C24;
+    color: #E6E8F0;
+    height: 1fr;
+    border: solid #2E3345;
+}
+
+DataTable > .datatable--header {
+    background: #222634;
+    color: #43D9D0;
+    text-style: bold;
+}
+
+DataTable:focus {
+    border: solid #43D9D0;
+}
+
+/* Result Card */
+#result-container, #ml-result-card, #cond-result-card {
+    background: #191C24;
+    border: double #43D9D0;
+    padding: 1 1;
+    margin: 1 0;
+}
+
+/* Disclaimer Banner */
+.disclaimer-box {
+    background: #1A1926;
+    border: solid #A879D5;
+    color: #E6E8F0;
+    padding: 1 1;
+    margin: 1 0;
+}
+
+/* Scrollable Container */
+.scrollable-content {
+    overflow-y: auto;
+    height: 1fr;
+    padding: 1 1;
+}
+
+/* Hermes Agent Inspired Welcome Card */
+#welcome-screen-container {
+    align: center middle;
+    height: 100%;
+    padding: 1 2;
+}
+
+#welcome-card {
+    width: 88;
+    max-width: 95%;
+    height: auto;
+    background: #141720;
+    border: double #43D9D0;
+    padding: 1 2;
+    align: center middle;
+}
+
+#welcome-logo {
+    margin-bottom: 0;
+    align: center middle;
+}
+
+#welcome-specs-box {
+    background: #181C26;
+    border: solid #2E3345;
+    padding: 1 1;
+    margin: 1 0;
+    width: 100%;
+}
+
+#welcome-desc {
+    color: #9299AA;
+    margin-bottom: 1;
+    text-align: center;
+}
+
+.welcome-actions {
+    height: 3;
+    margin-top: 1;
+    align: center middle;
+}
+
+.welcome-btn {
+    min-width: 22;
+    height: 3;
+    margin: 0 1;
+}
+
+/* Chat-First Assistant Workspace */
+#chat-workspace-container {
+    height: 1fr;
+    layout: vertical;
+    padding: 0 1;
+}
+
+#chat-messages-scroll {
+    height: 1fr;
+    overflow-y: auto;
+    padding: 1 1;
+    background: #141720;
+    border: round #2E3345;
+    margin-bottom: 1;
+}
+
+.chat-msg {
+    height: auto;
+    margin-bottom: 1;
+    padding: 1 1;
+}
+
+.chat-msg-user {
+    background: #192635;
+    border-left: solid #43D9D0;
+    color: #E6E8F0;
+    margin-left: 6;
+}
+
+.chat-msg-assistant {
+    background: #181C28;
+    border-left: solid #A879D5;
+    color: #E6E8F0;
+    margin-right: 6;
+}
+
+.chat-msg-rich {
+    margin-top: 1;
+    height: auto;
+}
+
+#chat-input-bar {
+    height: 3;
+    margin-bottom: 1;
+    align-vertical: middle;
+}
+
+#chat-input-field {
+    width: 1fr;
+    height: 3;
+    margin-right: 1;
+    background: #161922;
+    border: solid #2E3345;
+    color: #E6E8F0;
+}
+
+#chat-input-field:focus {
+    border: solid #43D9D0;
+    background: #1C202C;
+}
+
+#btn-chat-send {
+    min-width: 12;
+    height: 3;
+    background: #1F364D;
+    color: #43D9D0;
+    border: solid #43D9D0;
+    text-style: bold;
+}
+
+#btn-chat-send:hover {
+    background: #2B4E70;
+    color: #FFFFFF;
+}
+
+#chat-chips-bar {
+    height: 3;
+    margin-bottom: 1;
+    align-vertical: middle;
+}
+
+.chip-btn {
+    min-width: 10;
+    height: 3;
+    margin-right: 1;
+    background: #1A1E29;
+    color: #9299AA;
+    border: none;
+    padding: 0 1;
+}
+
+.chip-btn:hover {
+    background: #262D3D;
+    color: #43D9D0;
+}
+
+.separator-label {
+    color: #2E3345;
+    padding: 0 1;
+}
+
+/* Condition Selection Rich Cards Grid (Stable 2-Column Flex Layout) */
+#condition-cards-grid {
+    layout: horizontal;
+    height: auto;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+.cond-col {
+    width: 1fr;
+    height: auto;
+    margin-right: 1;
+}
+
+.cond-card {
+    background: #161922;
+    border: round #2E3345;
+    padding: 1 1;
+    height: auto;
+    margin-bottom: 1;
+}
+
+.cond-card:focus-within {
+    border: round #43D9D0;
+}
+
+.cond-card:hover {
+    border: round #43D9D0;
+}
+
+.cond-card-title {
+    color: #43D9D0;
+    text-style: bold;
+    margin-bottom: 0;
+}
+
+.cond-card-desc {
+    color: #E6E8F0;
+    margin-bottom: 1;
+}
+
+.cond-card-markers {
+    color: #9299AA;
+    margin-bottom: 1;
+}
+
+.cond-card-btn {
+    height: 3;
+    min-width: 18;
+    background: #1F364D;
+    color: #43D9D0;
+    border: solid #2B4E70;
+    text-style: bold;
+    width: 100%;
+}
+
+.cond-card-btn:hover {
+    background: #2B4E70;
+    color: #FFFFFF;
+}
+
+/* Responsive Adaptive Layout Tokens (-narrow mode for width < 96) */
+.-narrow #dash-content-grid {
+    layout: vertical;
+}
+
+.-narrow .dash-col {
+    width: 100%;
+    margin-right: 0;
+}
+
+.-narrow .ml-workspace {
+    layout: vertical;
+}
+
+.-narrow .ml-form-col {
+    width: 100%;
+    height: 1fr;
+    min-height: 25;
+    border-right: none;
+    border-bottom: solid #2E3345;
+    padding-right: 0;
+    margin-bottom: 1;
+}
+
+.-narrow .ml-results-col {
+    width: 100%;
+    height: 1fr;
+    min-height: 25;
+    padding-left: 0;
+}
+
+.-narrow .cond-workspace {
+    layout: vertical;
+}
+
+.-narrow .cond-form-col {
+    width: 100%;
+    height: 1fr;
+    min-height: 25;
+    border-right: none;
+    border-bottom: solid #2E3345;
+    padding-right: 0;
+    margin-bottom: 1;
+}
+
+.-narrow .cond-results-col {
+    width: 100%;
+    height: 1fr;
+    min-height: 25;
+    padding-left: 0;
+}
+
+.-narrow #condition-cards-grid {
+    layout: vertical;
+}
+
+.-narrow .cond-col {
+    width: 100%;
+    margin-right: 0;
+}
+
+.-narrow .chat-msg-user {
+    margin-left: 1;
+}
+
+.-narrow .chat-msg-assistant {
+    margin-right: 1;
+}
+
+

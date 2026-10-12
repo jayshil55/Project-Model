@@ -1,0 +1,90 @@
+{
+  "project": "NutriCare ML -- Blood Biomarker Analysis",
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 200,
+  "max_depth": "None",
+  "min_samples_leaf": 2,
+  "class_weight": "balanced",
+  "preprocessing": "SimpleImputer(strategy='median')",
+  "training_date": "2026-10-12 19:03:08",
+  "dataset_file": "TrainData.xlsx",
+  "dataset_sheet": "Synthetic_Dataset",
+  "total_records": 1000,
+  "train_records": 800,
+  "test_records": 200,
+  "test_size": 0.2,
+  "random_seed": 42,
+  "input_features": [
+    "Glucose_mg_dL",
+    "HbA1c_pct",
+    "Hemoglobin_g_dL",
+    "Total_Cholesterol_mg_dL",
+    "LDL_Cholesterol_mg_dL",
+    "HDL_Cholesterol_mg_dL",
+    "Triglycerides_mg_dL",
+    "Vitamin_D_ng_mL",
+    "Vitamin_B12_pg_mL",
+    "Ferritin_ng_mL",
+    "Creatinine_mg_dL",
+    "Urea_mg_dL",
+    "ALT_U_L",
+    "AST_U_L",
+    "WBC_10^9_L",
+    "Platelet_10^9_L",
+    "RBC_10^12_L",
+    "TSH_mIU_L",
+    "Albumin_g_dL",
+    "CRP_mg_L",
+    "eGFR_mL_min_1_73m2",
+    "Bilirubin_mg_dL",
+    "ALP_U_L",
+    "Sodium_mmol_L",
+    "Potassium_mmol_L",
+    "Calcium_mg_dL",
+    "Magnesium_mg_dL",
+    "Folate_ng_mL",
+    "MCV_fL",
+    "MCH_pg",
+    "MCHC_g_dL",
+    "RDW_pct",
+    "Neutrophil_10^9_L",
+    "Lymphocyte_10^9_L",
+    "ApoB_mg_dL",
+    "Lipoprotein_a_mg_dL",
+    "Homocysteine_umol_L",
+    "GGT_U_L",
+    "UACR_mg_g"
+  ],
+  "feature_count": 39,
+  "target_column": "Health_Label",
+  "target_classes": [
+    "GOOD",
+    "HARD",
+    "MEDIUM"
+  ],
+  "class_distribution": {
+    "total": {
+      "MEDIUM": 712,
+      "GOOD": 261,
+      "HARD": 27
+    },
+    "train": {
+      "MEDIUM": 570,
+      "GOOD": 209,
+      "HARD": 21
+    },
+    "test": {
+      "MEDIUM": 142,
+      "GOOD": 52,
+      "HARD": 6
+    }
+  },
+  "evaluation": {
+    "accuracy": 0.98,
+    "macro_f1": 0.9552,
+    "dummy_accuracy": 0.71,
+    "dummy_macro_f1": 0.2768
+  },
+  "disclaimer": "This is a synthetic educational dataset. Model performance on this data does NOT establish real-world medical accuracy. Labels are rule-derived demonstration categories, not clinical diagnoses or validated risk scores.",
+  "safety_warning": "The saved model file (nutricare_model.pkl) uses Python pickle format. Only load this file from a trusted source. Never load untrusted pickle files."
+}

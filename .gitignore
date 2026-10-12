@@ -1,0 +1,40 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+**/__pycache__/
+
+# Virtual Environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+**/venv/
+**/env/
+**/.venv/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Model artifacts (large binaries)
+models/*.pkl
+**/models/*.pkl
+
+# Outputs (regenerable)
+outputs/
+**/outputs/
+
+# Jupyter
+.ipynb_checkpoints/
